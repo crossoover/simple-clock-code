@@ -1,0 +1,85 @@
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Helvetica', sans-serif;
+   color: white;
+}
+
+.App {
+   overflow: hidden;
+   background: rgb(130, 226, 39);
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+
+      .clock {
+         text-decoration: none;
+         font-size: 100px;
+         color: white;
+         padding: 20px;
+         border-radius: 50px;
+         border: 10px solid white;
+         transition: 0.5s;
+         text-align: center;
+         user-select: none;
+
+         &:hover {
+            transform: scale(1.02);
+         }
+
+      }
+   }
+
+   .text {
+      text-align: center;
+   }
+}
+
+@media screen and (max-width: 550px) {
+   .App {
+      .wrapper {
+         justify-content: space-between;
+         height: 400px;
+
+         .clock {
+            font-size: 70px;
+            height: 150px;
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 470px) {
+   .App {
+      .clock {
+         transform: scale(0.8);
+      }
+
+      .clock_3 {
+         transform: scale(0.8);
+      }
+   }
+}
+
+@media screen and (max-width: 420px) {
+   .App {
+      .clock {
+         font-size: 50px;
+      }
+   }
+}
